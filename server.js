@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
   res.json({status:200,message:"hello world"});
 });
 app.get('/someroute', (req, res) => {
-  res.send("hello world");
+  res.send("hello world ");
 });
 app.listen(3000);
 
