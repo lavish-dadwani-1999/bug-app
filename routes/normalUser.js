@@ -8,6 +8,7 @@ router.patch('/updatestatus/:id', Auth, (req, res) => {
   var id = req.params.id;
   var user = req.user;
   var body = req.body;
+ 
   if (!id) return res.status(404).json({message:"Enter Id",status:404})
 //   if (!body.ticket_status) return res.status(404).send('Enter Status');
   Bug.updateOne({ _id: id }, { ...req.body }).then((responce) => {

@@ -16,7 +16,6 @@ router.post("/bug/:email",Auth,isAdmin,(req,res)=>{
   var email = req.params.email
   var user = null
   var body = req.body
-  console.log(body)
   if (!body.title || !body.ticket_description)
   return res.status(404).json({message:"Invalid Credentials",status:404})
 // if (!body.ticket_status) return res.status(404).send('Enter status');
@@ -104,7 +103,6 @@ var user = req.user
 router.patch('/updateBug/:id',Auth,isAdmin, (req, res) => {
   var id = req.params.id
   var body = req.body;
-  console.log(body)
 var user = req.user
   if (!body.title || !body.ticket_description)
     return res.status(404).json({message:"Invalid Credentials",status:404})
